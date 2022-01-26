@@ -1,8 +1,9 @@
 {% extends 'portfolio/base.html' %}
 {% block content %}
 
-<h1>Welcome to my Blog</h1>
-<h2>Sarath has written {{blogs.count}} blog{{blogs.count|pluralize}}</h2>
+<br>
+<h1>Latest Innovations in Farming Sector</h1><br>
+<h5 style="text-align:left;">Total blogs written {{blogs.count}} blog{{blogs.count|pluralize}}</h5>
 
 
 {% for blog in blogs %}

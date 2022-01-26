@@ -11,6 +11,9 @@ def home(request):
     projects = Project.objects.all()
     return render(request,'portfolio/home.html',{'projects':projects})
 
+def aboutus(request):
+    return render(request,'portfolio/aboutus.html')
+
 def simple_upload(request):
     if request.method == 'POST':
         project_resource = ProjectResource()

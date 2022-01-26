@@ -1,0 +1,106 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+{% load static %}
+<br>
+<div class="bg-light">
+  <div class="container py-5">
+    <div class="row h-100 align-items-center py-5">
+      <div class="col-lg-6">
+        <h1 style="font-size:300%;" class="display-4">About FarmConnect</h1>
+        <p class="lead text-muted mb-0" style="text-align:left;font-size:100%;">
+          <i>Farm Connect is an organisation seeking to help farmers and the people related to Farming sector.
+          This is an effective alternative to the in-efficient supply chain that exists today.<br>
+          We, Farm connect act as a medium to connect farmers and the related businessmen.
+          Our mission is to create a better connection all over the Agri business by bringing farmers,
+          retailers, Agricultural labours, Agricultural Engineers and farming related businessmen under
+          one roof, thus decreasing the need of middlemen.
+          </i></p>
+          <br>
+        <p class="lead text-muted" style="font-family:Century Gothic;background-color:powderblue;font-size:100%;">
+                  Good for farmers, Good for the economy, Good for the earth.</p>
+        </p>
+      </div>
+      <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid" width="400" height='400'></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="bg-light py-5">
+  <div class="container py-5">
+    <div class="row mb-4">
+      <div class="col-lg-5">
+        <h3 class="display-4 font-weight-light">Our team</h3>
+        <h4 class="font-italic text-muted">Group of Industrial Engineering students from Concordia University.</h4>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <!-- Team item-->
+      <div class="col">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'portfolio/Aditya_Penmetsa.jpeg' %}" alt="" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h6 class="mb-0">Aditya Penmetsa</h6><h8 class="text-muted">Frontend</h8>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End-->
+
+      <!-- Team item-->
+      <div class="col">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'portfolio/Sarath_Reddy.jpg' %}" alt="" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h6 class="mb-0">Sarath Reddy</h6><h8 class="text-muted">Backend</h8>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End-->
+
+      <!-- Team item-->
+      <div class="col">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'portfolio/RamKiran_Boga.jpeg' %}" alt="" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h6 class="mb-0">Ram Kiran</h6><h8 class="text-muted">Market Research</h8>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End-->
+
+      <!-- Team item-->
+      <div class="col">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'portfolio/Emmanuel.jpg' %}" alt="" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h6 class="mb-0">Emmanuel Joseph</h6><h8 class="text-muted">Data Visualization</h8>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End-->
+
+      <!-- Team item-->
+      <div class="col">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'portfolio/Kumar.jpg' %}" alt="" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h6 class="mb-0">Kumar Chinipilli</h6><h8 class="text-muted">Supply Chain</h8>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End-->
+    </div>
+  </div>
+</div>
+
+<footer class="bg-light pb-5">
+  <div class="container text-center">
+    <p class="font-italic text-muted mb-0">&copy; 2022 FarmingConnect.com</p>
+    <p class="font-italic text-muted mb-0">All rights reserved</p>
+  </div>
+</footer>
+
+<!-- col-xl-3 col-sm-6 mb-5 -->
+{% endblock %}

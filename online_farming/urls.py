@@ -1,4 +1,4 @@
-"""personal_portfolio URL Configuration
+"""online_farming URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -26,6 +26,7 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('blog/', include('blog.urls')),
     path('upload/',views.simple_upload),
+    path('aboutus/',views.aboutus,name='aboutus'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
