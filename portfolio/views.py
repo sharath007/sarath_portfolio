@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Project
 from .resources import ProjectResource
@@ -6,6 +6,8 @@ from django.contrib import messages
 from tablib import Dataset
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateNewUser
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 # portfolio app
@@ -19,12 +21,26 @@ def registerpage(request):
         form = CreateNewUser(request.POST)
         if form.is_valid():
             form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request,'Successfully Registered for ' + user)
+
+            return redirect('login')
     else:
         form = CreateNewUser()
 
     return render(request,'portfolio/register.html',{'form': form})
 #---------------------------------
 def loginpage(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request,username=username,password=password)
+        if user is not None:
+            login(request,user)
+            return redirect('home')
+        else:
+            messages.info(request,'Username or Password is incorrect')
     context = {}
     return render(request,'portfolio/login.html',context)
 #---------------------------------
