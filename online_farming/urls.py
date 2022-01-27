@@ -22,11 +22,14 @@ from portfolio import views
 #from projectapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name = 'admincontrol'),
     path('',views.home,name='home'),
     path('blog/', include('blog.urls')),
-    path('upload/',views.simple_upload),
+    path('upload/',views.simple_upload, name = 'Data_Update'),
     path('aboutus/',views.aboutus,name='aboutus'),
+    path('login/', views.loginpage, name='login'),
+    path('register/', views.registerpage,name = 'register'),
+    path('managesite/', views.managesite,name = 'managesite'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -48,11 +48,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Support</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href = '{% url 'aboutus' %}'> About </a>
-          </li>
           <li>
-            <a role="button" href="{% url 'blog:all_blogs' %}" class="btn btn-primary">Latest News</a>
+            <a role="button" class="btn btn-secondary" href = '{% url 'aboutus' %}'> About </a>
+            <a role="button" class="btn btn-primary" href="{% url 'blog:all_blogs' %}" >Latest News</a>
           </li>
         </ul>
       </div>

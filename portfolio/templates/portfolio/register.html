@@ -1,0 +1,9 @@
+<h1> Register </h1>
+
+<form method = "POST" action=".">
+
+  {{form.as_table}}
+  {% csrf_token %}
+
+  <input type='submit' name="Create User">
+</form>

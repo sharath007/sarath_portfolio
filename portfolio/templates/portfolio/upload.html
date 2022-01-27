@@ -1,16 +1,28 @@
-        {% if messages %}
-      {%for message in messages%}
 
-<div class="alert alert-{{ message.tags }}" role="alert">
-   <p{% if message.tags %} class=""{% endif %}>{{ message }}</p>
+<div style="float: left; position: relative; left: 50%;">
+    <div style="float: left; position: relative; left: -50%;">
+      <br><br>
+
+      {% if messages %}
+        {%for message in messages%}
+          <div class="alert alert-{{ message.tags }}" role="alert">
+             <p{% if message.tags %} class=""{% endif %}>{{ message }}</p>
+          </div>
+        {%endfor%}
+      {% endif %}
+
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1> Please upload Excel or CSV file </h1>
+        <input type="file" name="myfile">
+        <button type="submit">Upload</button>
+      </form>
+
+      <br><br>
+      <a href = '{% url 'managesite' %}'> Site Management </a>
+      <br><br>
+      <a href = '{% url 'home' %}'>Home</a>
+    </div>
+
+
 </div>
-
-{%endfor%}
-{% endif %}
-
-<form method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-  <input type="file" name="myfile">
-  <button type="submit">Upload</button>
-  <h1> Please upload Excel file </h1>
-</form>
