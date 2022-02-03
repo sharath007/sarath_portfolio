@@ -28,6 +28,7 @@ urlpatterns = [
     path('upload/',views.simple_upload, name = 'Data_Update'),
     path('aboutus/',views.aboutus,name='aboutus'),
     path('login/', views.loginpage, name='login'),
+    path('logout/', views.logoutUser, name='logout'),
     path('register/', views.registerpage,name = 'register'),
     path('managesite/', views.managesite,name = 'managesite'),
 ]
