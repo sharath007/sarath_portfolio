@@ -1,5 +1,6 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
+{% load static %}
 <br><br>
 <html>
 
@@ -16,13 +17,13 @@
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background: #FFFFFF !important;
+			background: #ffffff !important;
 		}
 		.user_card {
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #708090;
+			background: #f5f5dc;
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -31,7 +32,7 @@
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+			border-radius: 30px;
 
 		}
 
@@ -40,13 +41,13 @@
 		}
 
 		#form-title{
-			color: #fff;
+			color: rgb(54, 50, 50);
 
 		}
 
 		.login_btn {
 			width: 100%;
-			background: #33ccff !important;
+			background: #5d94a7 !important;
 			color: white !important;
 		}
 		.login_btn:focus {
@@ -69,15 +70,23 @@
 		}
 
 		#messages{
-			background-color: grey;
-			color: #fff;
+			background-color: #327ed4;
+			color: rgb(17, 16, 16);
+			position: relative;
+			justify-content: center;
 			padding: 10px;
 			margin-top: 10px;
+			border-radius: 10px;
+			
 		}
+		
+		
+
 	</style>
 
 </head>
 <body>
+	
 	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
@@ -116,7 +125,7 @@
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						Don't have an account?
-            <a style="color:white" href="{% url 'register' %}" class="ml-2">Register</a>
+            <a style="color:rgb(200, 22, 75)" href="{% url 'register' %}" class="ml-2">Register</a>
 					</div>
 
 				</div>
@@ -126,3 +135,4 @@
 </body>
 
 </html>
+
